@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     provider.eligibility.toString(),
                     style: TextStyle(
-                      fontSize: 90,
+                      fontSize: 52,
                     ),
                   ),
                   Container(
