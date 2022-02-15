@@ -33,21 +33,24 @@ class _HomePageState extends State<HomePage> {
                       fontSize: 90,
                     ),
                   ),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18.0),
-                                    side: BorderSide(color: Colors.red)))),
-                    onPressed: () {},
-                    child: TextField(
-                      decoration: InputDecoration(hintText: "Enter Your Age"),
-                      onChanged: (val) {
-                        provider.checkeligibility(int.parse(val));
-                      },
+                  Container(
+                    padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(18.0),
+                                      side: BorderSide(color: Colors.red)))),
+                      onPressed: () {},
+                      child: TextField(
+                        decoration: InputDecoration(hintText: "Enter Your Age"),
+                        onChanged: (val) {
+                          provider.checkeligibility(int.parse(val));
+                        },
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
             );
